@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream-100 text-ink antialiased;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
+}
+
+@layer utilities {
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

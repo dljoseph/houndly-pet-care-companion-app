@@ -1,0 +1,18 @@
+For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
+
+By default, this template supports JSX syntax with Tailwind CSS classes, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.
+
+Use icons from lucide-react for logos.
+
+Import project modules with the `@/` path alias, which maps to `src/` (e.g. `@/components/Foo` == `src/components/Foo`), instead of deep relative paths like `../../components/Foo`.
+
+# Houndly – standing rules
+
+- UK British English in all copy. Dates as 30 Oct 2026, 24-hour times, weight in kg.
+- Mobile first from 360 px, responsive to laptop (1280 px). Bottom navigation on phone, sidebar on laptop.
+- Stack: React, Vite, TypeScript, Tailwind CSS, Supabase (Auth, Postgres, Storage, Edge Functions). Do not switch frameworks.
+- Security: RLS on every table and on the dog-photos bucket. Every row has owner_id = auth.uid(). Never put API keys in front-end code. OPENAI_API_KEY lives only in Supabase secrets and is used only by the generate-checklist Edge Function.
+- AI safety: the AI only reformats the owner's own instructions into tasks. It never adds medical advice, tasks, doses, drugs or durations. The Checklist Builder shows: "Houndly is not a vet. It only organises the instructions you paste in. If you're unsure, check with your vet."
+- Accessibility: WCAG 2.2 AA. Labelled inputs, 4.5:1 text contrast, 44 px tap targets, flags shown by icon and text, not colour alone.
+- Look and feel: warm and friendly. Soft greens and creams, rounded cards, gentle shadows, friendly dog touches; calm, not childish.
+- Work on one feature at a time. Do not change files unrelated to the current request.
